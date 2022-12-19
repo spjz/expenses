@@ -130,6 +130,7 @@ abstract class Model
         $model = new static();
 
         $idColName = static::idColName();
+
         if (!isset($array[$idColName])) {
             throw new Exception('Unable to create model from array with missing id in D3R_Model::CreateFromArray()');
         }

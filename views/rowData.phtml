@@ -1,0 +1,13 @@
+<tr class="row-data">
+    <td class="supplier"><?php echo $this->supplier; ?></td>
+    <td class="rating">
+        <?php for ($i = 0; $i < $this->rating; $i++): ?>
+         <img src="/images/RatingOn.png" alt="£" />
+        <?php endfor; 
+        for ($j = $i; $j < 5; $j++): ?>
+        <img src="/images/RatingOff.png" alt="£" />
+        <?php endfor; ?>
+    </td>
+    <td class="reference"><?php echo $this->reference; ?></td>
+    <td class="value"><?php echo $this->value; ?></td>
+</tr>

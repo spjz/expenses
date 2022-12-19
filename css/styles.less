@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+body {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #e1e0e0;
+    margin: 2rem auto;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        flex-grow: 0;
+        box-shadow: hwb(0 0% 100% / 0.24) 0px 3px 8px;
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    header,
+    section {
+
+        h1 {
+            color: #2288b7;
+            font-weight: normal;
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+            font-weight: normal;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+
+            .flex-column {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                justify-content: space-around;
+            }
+
+            .flex-row {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-grow: 1;
+                justify-content: space-around;
+            }
+
+            form {
+                display: flex;
+
+                .input {
+                    display: flex;
+                    flex-grow: 1;
+                }
+
+                input,
+                select,
+                button {
+                    flex-grow: 1;
+                    margin: .5rem;
+                    padding: .5rem;
+                    border-radius: 5px;
+                    border: 1px solid #e1e1e1;
+                }
+
+                button.reset {
+                    background: rgb(203,203,203);
+                    background: linear-gradient(0deg, rgba(203,203,203,1) 0%, rgba(240,240,240,1) 100%);
+                    color: #494949;
+                    border: none;
+                    font-weight: bold;
+                }
+                button.search {
+                    background: rgb(59,135,241);
+                    background: linear-gradient(0deg, rgba(59,135,241,1) 0%, rgba(106,160,243,1) 100%);
+                    color: #494949;
+                    border: none;
+                    font-weight: bold;                    color: #fff;
+                }
+
+            }
+
+            table {
+                border-spacing: 0;
+                border-collapse: collapse;
+                border: 2px solid #dbdedf;
+                border-radius: 10px;
+
+                thead {
+                    background: #eaeced;
+                    color: #666666;
+
+                    tr {
+                        
+                        th {
+                            padding: 1rem;
+                            border: 2px solid #dbdedf;
+
+                            &:first-child {
+                                text-align: left !important;
+                            }
+                        }
+                    }
+                }
+
+                tbody {
+                    color: #898989;
+
+                    tr {
+                        td {
+                            padding: .5rem 1rem;
+                            border: 2px solid #dbdedf;
+
+                            &:not(:first-child) {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            ul.pagination {
+                display: flex;
+                flex-direction: row;
+                margin: 1rem auto;
+                list-style-position: inside;
+                list-style-type: none;
+
+                li {
+                    
+                    a {
+                        button {
+                            background: #eee;
+                            border: 1px solid #b8b8b8;
+                            border-radius: 5px;
+                            padding: 1rem;
+                            margin: .5rem;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            button {
+                                background: #646464;
+                                color: #f2f2f2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

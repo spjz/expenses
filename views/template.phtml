@@ -1,0 +1,106 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Expense Explorer</title>
+  <meta name="description" content="Demonstration programming task for D3R interview process.">
+  <meta name="author" content="Joe Doherty">
+
+  <meta property="og:title" content="Expense Explorer">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
+  <meta property="og:description" content="Demonstration programming task for D3R interview process.">
+  <meta property="og:image" content="images/tile.png">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+  <main class="flex-container">
+
+    <header>
+      <div class="flex-container">
+        <div class="flex-column">
+          <h1>Where your money goes</h1>
+          <h2>Payments made by Chichester District Council to individual suppliers with a value over £500 made within
+            October
+          </h2>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="flex-container">
+
+        <form id="controls" class="flex-row" method="GET" action="/">
+          <div class="input">
+            <input name="supplier" type="text" placeholder="Search suppliers" />
+          </div>
+          <div class=input>
+            <select name="rating">
+              <option value="1">&pound;</option>
+              <option value="2">&pound;&pound;</option>
+              <option value="3">&pound;&pound;&pound;</option>
+              <option value="4">&pound;&pound;&pound;&pound;</option>
+              <option value="5">&pound;&pound;&pound;&pound;&pound;</option>
+            </select>
+          </div>
+          <div class="input">
+            <button name="reset" class="reset">Reset</button>
+            <button name="search" class="search">Search</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="flex-container">
+        <div class="flex-column">
+
+          <table>
+            <thead>
+              <tr>
+                <th>Supplier</th>
+                <th>Pound Rating</th>
+                <th>Reference</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($this->rows as $row):
+                echo $row;
+              endforeach; ?>
+            </tbody>
+          </table>
+
+          <ul class="pagination">
+            <?php foreach ($this->pagination as $page):
+              echo $page;
+            endforeach; ?>
+          </ul>
+
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

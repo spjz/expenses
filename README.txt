@@ -40,7 +40,7 @@ We've also provided a PSD, if you're into that kind of thing. We did however alr
 
 The font we've used is called 'Source Sans Pro' and should be available quite
 freely on the web. Here's the page about it on Adobe.com -
-http://blogs.adobe.com/typblography/2012/08/source- sans-pro.html.
+http://blogs.adobe.com/typblography/2012/08/source-sans-pro.html.
 
 If you're more confortable using a pre-processor like SASS/LESS, do go ahead and use that here too.
 
